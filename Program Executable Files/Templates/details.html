@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Model Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background-image: url('https://www.agrivi.com/wp-content/uploads/2016/12/Blog-Sustainable-Rice-Farming.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .info-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            backdrop-filter: blur(4px);
+        }
+
+        .info-box {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .info-box h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .info-box p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .info-box ul {
+            list-style-type: disc;
+            text-align: left;
+            margin-left: 40px;
+            color: #333;
+        }
+
+        .info-box a {
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            color: white;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 6px;
+        }
+
+        .info-box a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="info-wrapper">
+        <div class="info-box">
+            <h2>Model Information</h2>
+            <p>This model was trained to classify different rice types using deep learning. It accepts images resized to 224x224 pixels.</p>
+            <ul>
+                <li>Input size: 224x224</li>
+                <li>Framework: TensorFlow / Keras</li>
+                <li>Number of classes: 5</li>
+                <li>Example classes: Basmati, Jasmine, Arborio, Ipsala, Karacandag</li>
+            </ul>
+            <a href="{{ url_for('home') }}">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

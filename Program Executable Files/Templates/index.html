@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rice Type Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">RICE TYPE DETECTION</div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('details') }}">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Rice Type Detection</h1>
+            <p>This model can detect rice type based on rice images.</p>
+            <form action="{{ url_for('predict') }}" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" accept="image/*" required>
+                <button type="submit" class="hero-btn">Predict</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>CONTACT US</h2>
+        <div class="contact-boxes">
+            <div class="contact-box">
+                <h3>Our Address</h3>
+                <p>GATES Institute Of Technology, Gooty<br>Ananthapuram, Andhra Pradesh, India</p>
+            </div>
+            <div class="contact-box">
+                <h3>Email Us</h3>
+                <p>23f25a0511@gatesit.ac.in<br>sulanithinkumar@gmail.com</p>
+            </div>
+            <div class="contact-box">
+                <h3>Call Us</h3>
+                <p>+91 96529 35023<br>+91 91827 81066</p>
+            </div>
+        </div>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+</body>
+</html>
